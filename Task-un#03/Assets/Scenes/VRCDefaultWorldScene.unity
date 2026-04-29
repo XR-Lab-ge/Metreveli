@@ -4226,8 +4226,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.4227378, y: 2.4235437, z: 3.960715}
-  m_Center: {x: 0.18413056, y: 1.1760615, z: 0.2033366}
+  m_Size: {x: 1.0842531, y: 2.4235437, z: 2.7617323}
+  m_Center: {x: 0.07962162, y: 1.1760615, z: 0.09216714}
 --- !u!54 &1397058484
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4454,8 +4454,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.4227378, y: 2.4235437, z: 3.960715}
-  m_Center: {x: 0.18413056, y: 1.1760615, z: 0.2033366}
+  m_Size: {x: 1.2227399, y: 2.423543, z: 2.7964678}
+  m_Center: {x: 0.07050008, y: 1.1760614, z: 0.14202227}
 --- !u!54 &1528032775
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5169,8 +5169,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.1967285, y: 2.5393102, z: 9.653074}
-  m_Center: {x: 0.094985686, y: 1.2339448, z: -0.29410526}
+  m_Size: {x: 1.0490779, y: 2.5393102, z: 3.7419198}
+  m_Center: {x: 0.15963553, y: 1.2339448, z: 0.01231293}
 --- !u!54 &1754161113
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6424,20 +6424,20 @@ MonoBehaviour:
   useAssignedLayers: 0
   DynamicPrefabs: []
   DynamicMaterials:
-  - {fileID: 2100000, guid: 88a48fd55609133438167170bd52ca08, type: 2}
-  - {fileID: 2100000, guid: 44aef5a62dd152b4294f0a5bf71e0e55, type: 2}
-  - {fileID: 2100000, guid: 6f62a43ceebea6c4ca855ac3b0a3c2ae, type: 2}
   - {fileID: 2100000, guid: f3f4dfe527b41744bad1464a0f7d2f77, type: 2}
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  - {fileID: 2100000, guid: a217f798c729d5e48ad4a872ff6c381b, type: 2}
-  - {fileID: -6271897200390792742, guid: f099beb1867843c4ca01386caed170ff, type: 3}
+  - {fileID: 2100000, guid: 6f62a43ceebea6c4ca855ac3b0a3c2ae, type: 2}
   - {fileID: 2100000, guid: 864d97bb49a971d42b5006f5b56ae8b4, type: 2}
-  - {fileID: 2100000, guid: 74d8ee311048d4145a0243e41aeb2427, type: 2}
-  - {fileID: -2288042113775837077, guid: f1bb287a8f84b794c8d32a55c8d657d7, type: 3}
-  - {fileID: -6915292824907980467, guid: f1bb287a8f84b794c8d32a55c8d657d7, type: 3}
+  - {fileID: 2100000, guid: 44aef5a62dd152b4294f0a5bf71e0e55, type: 2}
+  - {fileID: -8569717648739512392, guid: f1bb287a8f84b794c8d32a55c8d657d7, type: 3}
   - {fileID: -6961940456202387283, guid: f1bb287a8f84b794c8d32a55c8d657d7, type: 3}
   - {fileID: -153151890718657952, guid: f1bb287a8f84b794c8d32a55c8d657d7, type: 3}
-  - {fileID: -8569717648739512392, guid: f1bb287a8f84b794c8d32a55c8d657d7, type: 3}
+  - {fileID: -2288042113775837077, guid: f1bb287a8f84b794c8d32a55c8d657d7, type: 3}
+  - {fileID: -6915292824907980467, guid: f1bb287a8f84b794c8d32a55c8d657d7, type: 3}
+  - {fileID: 2100000, guid: 88a48fd55609133438167170bd52ca08, type: 2}
+  - {fileID: -6271897200390792742, guid: f099beb1867843c4ca01386caed170ff, type: 3}
+  - {fileID: 2100000, guid: 74d8ee311048d4145a0243e41aeb2427, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a217f798c729d5e48ad4a872ff6c381b, type: 2}
   - {fileID: 2100000, guid: 8394ebc4972c8f847bf0dd89ade466fb, type: 2}
   LightMapsNear: []
   LightMapsFar: []

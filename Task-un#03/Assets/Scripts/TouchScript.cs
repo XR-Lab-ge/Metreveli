@@ -4,8 +4,8 @@ using VRC.SDKBase;
 
 public class TouchScript : UdonSharpBehaviour
 {
-    public Color touchColor = new Color(0.2f, 0.6f, 1.0f); // ლურჯი
-    public Color defaultColor = new Color(0.55f, 0.37f, 0.24f); // ყავისფერი
+    public Color touchColor = new Color(0.2f, 0.6f, 1.0f);
+    public Color defaultColor = new Color(0.55f, 0.37f, 0.24f);
 
     private Renderer[] renderers;
     private bool isColored = false;
@@ -19,30 +19,24 @@ public class TouchScript : UdonSharpBehaviour
 
     public override void OnPlayerTriggerEnter(VRCPlayerApi player)
     {
-        if (player.isLocal) DisableInteractive = false; // ზონაში შესვლისას click ირთვება
+        if (player.isLocal) DisableInteractive = false;
     }
 
     public override void OnPlayerTriggerExit(VRCPlayerApi player)
     {
-        if (player.isLocal)
-        {
-            DisableInteractive = true; // გამოსვლისას ითიშება
-            isColored = false;
-            SetColor(defaultColor); // ფერიც ბრუნდება დეფოლტზე
-        }
+        if (player.isLocal) DisableInteractive = true;
+        // ფერი აღარ ბრუნდება — სამუდამოდ რჩება ✅
     }
 
     public override void Interact()
     {
-        isColored = !isColored; // Toggle ლოგიკა
+        isColored = !isColored;
         SetColor(isColored ? touchColor : defaultColor);
     }
 
     private void SetColor(Color c)
     {
         foreach (Renderer r in renderers)
-        {
             if (r != null) r.material.color = c;
-        }
     }
 }
