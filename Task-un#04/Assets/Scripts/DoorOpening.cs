@@ -29,7 +29,6 @@ public class DoorOpening : UdonSharpBehaviour
     {
         if (leftDoorPivot == null || rightDoorPivot == null) return;
 
-        // რბილი მოძრაობა
         t = Mathf.MoveTowards(t, isOpen ? 1f : 0f, Time.deltaTime * speed);
         float smoothT = Mathf.SmoothStep(0f, 1f, t);
 
