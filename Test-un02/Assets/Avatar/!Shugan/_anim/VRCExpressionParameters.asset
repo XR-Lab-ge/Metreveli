@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1506855854, guid: 67cc4cb7839cd3741b63733d5adf0442, type: 3}
+  m_Name: VRCExpressionParameters
+  m_EditorClassIdentifier: 
+  parameters:
+  - name: VRCEmote
+    valueType: 0
+    saved: 1
+    defaultValue: 0
+  - name: Bandage
+    valueType: 2
+    saved: 1
+    defaultValue: 1
+  - name: Baton
+    valueType: 2
+    saved: 1
+    defaultValue: 0
+  - name: Belt
+    valueType: 2
+    saved: 1
+    defaultValue: 1
+  - name: Bra
+    valueType: 2
+    saved: 1
+    defaultValue: 1
+  - name: Chem
+    valueType: 2
+    saved: 1
+    defaultValue: 1
+  - name: Collar
+    valueType: 2
+    saved: 1
+    defaultValue: 1
+  - name: Ears
+    valueType: 2
+    saved: 1
+    defaultValue: 1
+  - name: Gloves
+    valueType: 2
+    saved: 1
+    defaultValue: 1
+  - name: Pantie
+    valueType: 2
+    saved: 1
+    defaultValue: 1
+  - name: Shoes
+    valueType: 2
+    saved: 1
+    defaultValue: 1
+  - name: Short
+    valueType: 2
+    saved: 1
+    defaultValue: 0
+  - name: Skirt
+    valueType: 2
+    saved: 1
+    defaultValue: 1
+  - name: Socks
+    valueType: 2
+    saved: 1
+    defaultValue: 0
+  - name: Stocking
+    valueType: 2
+    saved: 1
+    defaultValue: 0
+  - name: Tail
+    valueType: 2
+    saved: 1
+    defaultValue: 1
+  - name: TighHigh
+    valueType: 2
+    saved: 1
+    defaultValue: 1
+  - name: VestLarge
+    valueType: 2
+    saved: 1
+    defaultValue: 0
+  - name: HueClothRadial
+    valueType: 1
+    saved: 1
+    defaultValue: 0
+  - name: SaturationClothRadial
+    valueType: 1
+    saved: 1
+    defaultValue: 0.5
+  - name: BrightnessClothRadial
+    valueType: 1
+    saved: 1
+    defaultValue: 0.5
+  - name: IntensityRadial
+    valueType: 1
+    saved: 1
+    defaultValue: 0.5
+  - name: c Hair
+    valueType: 1
+    saved: 1
+    defaultValue: 0
+  - name: c Skin
+    valueType: 1
+    saved: 1
+    defaultValue: 0
+  - name: c Eyes
+    valueType: 1
+    saved: 1
+    defaultValue: 0
+  - name: ON
+    valueType: 2
+    saved: 1
+    defaultValue: 1
