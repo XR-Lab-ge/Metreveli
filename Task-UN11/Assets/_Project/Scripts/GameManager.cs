@@ -75,7 +75,7 @@ public class GameManager : MonoBehaviour
             UpdateHUD();
             UpdateBossBar();
         }
-        if (Input.GetKeyDown(KeyCode.Escape) && (state == GameState.Combat || state == GameState.Paused))
+        if (Input.GetKeyDown(KeyCode.Escape) && state != GameState.Menu && state != GameState.GameOver && state != GameState.Win)
             TogglePause();
     }
 

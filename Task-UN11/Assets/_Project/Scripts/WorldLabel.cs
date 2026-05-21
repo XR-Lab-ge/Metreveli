@@ -1,42 +1,68 @@
 using UnityEngine;
 using TMPro;
 
+[ExecuteAlways]
 public class WorldLabel : MonoBehaviour
 {
-    public string label = "PICKUP";
-    public Color color = new Color(0f, 0.9f, 1f, 1f);
-    public Vector3 offset = new Vector3(0, 2f, 0);
-    public float fontSize = 4f;
+    public string label = "INTERACT [E]";
+    public Color color = Color.red;
+    public Vector3 offset = new Vector3(0, 2, 0);
+    public float fontSize = 4;
     public float bobAmplitude = 0.1f;
-    public float bobSpeed = 2f;
+    public float bobSpeed = 2;
 
-    TextMeshPro tmp;
-    Camera cam;
-    Vector3 baseLocal;
+    private TextMeshPro tmp;
 
-    void Start()
+    void OnEnable()
     {
-        cam = Camera.main;
-        GameObject child = new GameObject("Label_TMP");
-        child.transform.SetParent(transform, false);
-        child.transform.localPosition = offset;
-        baseLocal = child.transform.localPosition;
-        tmp = child.AddComponent<TextMeshPro>();
-        tmp.text = label;
-        tmp.fontSize = fontSize;
-        tmp.color = color;
-        tmp.alignment = TextAlignmentOptions.Center;
-        tmp.enableWordWrapping = false;
-        tmp.fontStyle = FontStyles.Bold;
-        tmp.outlineWidth = 0.2f;
-        tmp.outlineColor = Color.black;
+        SetupLabel();
     }
 
-    void LateUpdate()
+    void SetupLabel()
     {
-        if (!tmp) return;
-        if (!cam) cam = Camera.main;
-        if (cam) tmp.transform.rotation = Quaternion.LookRotation(tmp.transform.position - cam.transform.position);
-        tmp.transform.localPosition = baseLocal + Vector3.up * Mathf.Sin(Time.time * bobSpeed) * bobAmplitude;
+        Transform existing = transform.Find("__WorldLabel");
+        GameObject labelGO;
+
+        if (existing != null) labelGO = existing.gameObject;
+        else
+        {
+            labelGO = new GameObject("__WorldLabel");
+            labelGO.transform.SetParent(transform);
+        }
+
+        labelGO.transform.localPosition = offset;
+
+        tmp = labelGO.GetComponent<TextMeshPro>();
+        if (tmp == null) tmp = labelGO.AddComponent<TextMeshPro>();
+
+        tmp.text = label;
+        tmp.fontSize = fontSize;
+        tmp.alignment = TextAlignmentOptions.Center;
+        tmp.color = color;
+        if (tmp.fontMaterial != null) tmp.fontMaterial.SetColor("_FaceColor", color);
+    }
+
+    void Update()
+    {
+        if (tmp == null) { SetupLabel(); return; }
+
+        if (Application.isPlaying)
+        {
+            float bob = Mathf.Sin(Time.time * bobSpeed) * bobAmplitude;
+            tmp.transform.position = transform.position + offset + Vector3.up * bob;
+        }
+        else
+        {
+            tmp.transform.localPosition = offset;
+        }
+
+        if (Camera.main != null)
+            tmp.transform.forward = Camera.main.transform.forward;
+
+        if (tmp.color != color)
+        {
+            tmp.color = color;
+            if (tmp.fontMaterial != null) tmp.fontMaterial.SetColor("_FaceColor", color);
+        }
     }
 }

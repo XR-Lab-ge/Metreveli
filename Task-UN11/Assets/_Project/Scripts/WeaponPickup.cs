@@ -26,6 +26,7 @@ public class WeaponPickup : MonoBehaviour
         float dist = Vector3.Distance(player.position, transform.position);
         if (dist < interactRange && Input.GetKeyDown(KeyCode.E))
         {
+            Debug.Log($"[WeaponPickup] E pressed. Distance={dist:F2}. GameManager state={GameManager.Instance?.state}");
             GameManager.Instance?.OnWeaponPickedUp();
         }
     }
